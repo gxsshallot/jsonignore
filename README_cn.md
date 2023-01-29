@@ -1,5 +1,11 @@
 # jsonformat
 
+[![status](https://github.com/gaoxiaosong/jsonformat/actions/workflows/go.yml/badge.svg?branch=master)](https://github.com/gaoxiaosong/jsonformat/actions/workflows/go.yml)
+[![codecov](https://codecov.io/gh/gaoxiaosong/jsonformat/branch/master/graph/badge.svg?token=AOXNUDXAS7)](https://codecov.io/gh/gaoxiaosong/jsonformat)
+[![gover](https://img.shields.io/badge/Go-v1.2+-blue)](https://go.dev/)
+[![godoc](https://pkg.go.dev/badge/github.com/gaoxiaosong/jsonformat?status.svg)](https://pkg.go.dev/github.com/gaoxiaosong/jsonformat)
+[![apache](https://img.shields.io/badge/License-Apache%202-blue.svg)](https://opensource.org/licenses/Apache-2.0)
+
 这个包是用来忽略Json序列化结果的一些字段的。
 
 主要用于日志模块，因为日志记录时，某些Json结果中包含非常长的字符串、需要保密的隐私信息等，这些需要被忽略输出。

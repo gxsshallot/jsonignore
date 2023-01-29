@@ -1,5 +1,11 @@
 # jsonformat
 
+[![status](https://github.com/gaoxiaosong/jsonformat/actions/workflows/go.yml/badge.svg?branch=master)](https://github.com/gaoxiaosong/jsonformat/actions/workflows/go.yml)
+[![codecov](https://codecov.io/gh/gaoxiaosong/jsonformat/branch/master/graph/badge.svg?token=AOXNUDXAS7)](https://codecov.io/gh/gaoxiaosong/jsonformat)
+[![gover](https://img.shields.io/badge/Go-v1.2+-blue)](https://go.dev/)
+[![godoc](https://pkg.go.dev/badge/github.com/gaoxiaosong/jsonformat?status.svg)](https://pkg.go.dev/github.com/gaoxiaosong/jsonformat)
+[![apache](https://img.shields.io/badge/License-Apache%202-blue.svg)](https://opensource.org/licenses/Apache-2.0)
+
 [中文文档](README_cn.md)
 
 This package is used to ignore some fields in object json string.
