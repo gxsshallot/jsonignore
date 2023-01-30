@@ -1,9 +1,9 @@
-# jsonformat
+# jsonignore
 
-[![status](https://github.com/gaoxiaosong/jsonformat/actions/workflows/go.yml/badge.svg?branch=master)](https://github.com/gaoxiaosong/jsonformat/actions/workflows/go.yml)
-[![codecov](https://codecov.io/gh/gaoxiaosong/jsonformat/branch/master/graph/badge.svg?token=AOXNUDXAS7)](https://codecov.io/gh/gaoxiaosong/jsonformat)
+[![status](https://github.com/gaoxiaosong/jsonignore/actions/workflows/go.yml/badge.svg?branch=master)](https://github.com/gaoxiaosong/jsonignore/actions/workflows/go.yml)
+[![codecov](https://codecov.io/gh/gaoxiaosong/jsonignore/branch/master/graph/badge.svg?token=AOXNUDXAS7)](https://codecov.io/gh/gaoxiaosong/jsonignore)
 [![gover](https://img.shields.io/badge/Go-v1.2+-blue)](https://go.dev/)
-[![godoc](https://pkg.go.dev/badge/github.com/gaoxiaosong/jsonformat?status.svg)](https://pkg.go.dev/github.com/gaoxiaosong/jsonformat)
+[![godoc](https://pkg.go.dev/badge/github.com/gaoxiaosong/jsonignore?status.svg)](https://pkg.go.dev/github.com/gaoxiaosong/jsonignore)
 [![apache](https://img.shields.io/badge/License-Apache%202-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 
 这个包是用来忽略Json序列化结果的一些字段的。
@@ -24,21 +24,21 @@
 样例：
 
 ```go
-import "github.com/gaoxiaosong/jsonformat"
+import "github.com/gaoxiaosong/jsonignore"
 
 // input = {"a":1}
 // result = {"a":"-"}
-result := jsonformat.ProcessObject(input, "-", []string{"a"})
+result := jsonignore.ProcessObject(input, "-", []string{"a"})
 
 // input = {"a":{"a1": 1}}
 // result = {"a":{}}
-result := jsonformat.ProcessObject(input, IgnoreModeDelete, []string{"a.a1"})
+result := jsonignore.ProcessObject(input, IgnoreModeDelete, []string{"a.a1"})
 
 // input = {"a":"{\"a1\":1}"}
 // result = {"a":"{\"a1\":\"-\"}"}
-result := jsonformat.ProcessObject(input, "-", []string{"a~.a1"})
+result := jsonignore.ProcessObject(input, "-", []string{"a~.a1"})
 
 // input = {"a":[{"a1":1},{"a2":2}]}
 // result = {"a":[{},{"a2":2}]}
-result := jsonformat.ProcessObject(input, IgnoreModeDelete, []string{"a*.a1"})
+result := jsonignore.ProcessObject(input, IgnoreModeDelete, []string{"a*.a1"})
 ```

@@ -1,4 +1,4 @@
-package jsonformat
+package jsonignore
 
 import "encoding/json"
 
